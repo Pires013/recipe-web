@@ -1,0 +1,70 @@
+/* RecipeItem.css */
+
+/* Item da lista */
+.receita-item {
+  background-color: #fff9f0;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.receita-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Nome da receita */
+.receita-item p:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Ingredientes e modo de preparo */
+.receita-item p:not(:first-child) {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Botão excluir */
+.receita-item button {
+  align-self: flex-start;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.receita-item button:hover {
+  background-color: #ff4c4c;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .receita-item {
+    padding: 0.8rem 1rem;
+  }
+
+  .receita-item p:first-child {
+    font-size: 1.1rem;
+  }
+
+  .receita-item p:not(:first-child) {
+    font-size: 0.9rem;
+  }
+
+  .receita-item button {
+    width: 100%;
+  }
+}

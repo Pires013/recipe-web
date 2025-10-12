@@ -1,0 +1,141 @@
+/* RecipePage.css */
+
+/* Geral da página */
+.receitas-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+.receitas-page h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Lista de receitas */
+.receitas-page ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* RecipeItem */
+.receitas-page ul li {
+  background-color: #fff9f0;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.receitas-page ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão deletar */
+.receitas-page ul li button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+
+.receitas-page ul li button:hover {
+  background-color: #ff4c4c;
+}
+
+.btn-nova-receita {
+  display: block;
+  margin: 0 auto 1.5rem auto; /* centralizado com espaçamento inferior */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-nova-receita:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+.btn-nova-receita:active {
+  transform: translateY(0);
+}
+
+/* Formulário de receitas */
+.receitas-page form {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.receitas-page form input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.receitas-page form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.receitas-page form button:hover {
+  background-color: #43a047;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .receitas-page {
+    padding: 1rem;
+  }
+
+  .receitas-page ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .receitas-page ul li button {
+    margin-top: 0.5rem;
+  }
+
+  .receitas-page form {
+    flex-direction: column;
+  }
+
+  .receitas-page form button {
+    width: 100%;
+  }
+}

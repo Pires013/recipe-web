@@ -1,0 +1,68 @@
+/* RecipeForm.css */
+
+/* Formulário geral */
+.receita-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Inputs e textarea */
+.receita-form input,
+.receita-form textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.receita-form input:focus,
+.receita-form textarea:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+/* Textarea */
+.receita-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Botão de enviar */
+.receita-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.receita-form button:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+/* Placeholder estilizado */
+.receita-form input::placeholder,
+.receita-form textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .receita-form {
+    gap: 0.8rem;
+  }
+  
+  .receita-form button {
+    width: 100%;
+  }
+}
