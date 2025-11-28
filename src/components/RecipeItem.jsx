@@ -1,15 +1,18 @@
-import "../assets/RecipeItem.css"
+import "../assets/RecipeItem.css";
 
-export const RecipeItem = ({ recipe, onDelete }) => {
+const RecipeItem = ({ recipe, onDelete, onEdit }) => {
   return (
-    <li className="receita-item">
-      <p>{recipe.nome}</p>
-      <p>Ingredientes: {recipe.ingredientes}</p>
-      <p>Preparo: {recipe.modoPreparo}</p>
-      <button onClick={() => onDelete(recipe.id)}>Excluir</button>
+    <li className="recipe-item">
+      <h3>{recipe.nome}</h3>
+      <p><strong>Ingredientes:</strong> {recipe.ingredientes}</p>
+      <p><strong>Modo de preparo:</strong> {recipe.modoPreparo}</p>
+
+      <div className="botoes">
+        <button onClick={onEdit}>Editar</button>
+        <button onClick={() => onDelete(recipe.id)}>Excluir</button>
+      </div>
     </li>
   );
 };
 
-
-export default RecipeItem
+export default RecipeItem;

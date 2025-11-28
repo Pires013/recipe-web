@@ -1,0 +1,51 @@
+/* Sidebar principal */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 220px;
+  background-color: #1b1f24;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* Título da sidebar */
+.sidebar-title {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Container dos links */
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Links individuais */
+.sidebar-links a {
+  color: #cfd8dc;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+/* Efeito hover */
+.sidebar-links a:hover {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+/* Link ativo (opcional se quiser marcar a página atual) */
+.sidebar-links a.active {
+  background-color: #00bcd4;
+  color: #fff;
+}

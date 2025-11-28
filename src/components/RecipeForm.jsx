@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../assets/RecipeForm.css";
 
-const RecipeForm = ({ onAdd }) => {
+const RecipeForm = ({ onAdd, receitaEdit }) => {
   const [nome, setNome] = useState("");
   const [ingredientes, setIngredientes] = useState("");
   const [modoPreparo, setModoPreparo] = useState("");
+
+  useEffect(() => {
+    if (receitaEdit) {
+      setNome(receitaEdit.nome);
+      setIngredientes(receitaEdit.ingredientes);
+      setModoPreparo(receitaEdit.modoPreparo);
+    } else {
+      setNome("");
+      setIngredientes("");
+      setModoPreparo("");
+    }
+  }, [receitaEdit]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,21 +26,8 @@ const RecipeForm = ({ onAdd }) => {
       return;
     }
 
-    const novaReceita = {
-      nome,
-      ingredientes,
-      modoPreparo,
-    };
-
-    try {
-      await onAdd(novaReceita); 
-      setNome("");
-      setIngredientes("");
-      setModoPreparo("");
-    } catch (error) {
-      console.error("Erro ao salvar receita:", error);
-      alert("Erro ao salvar receita. Tente novamente.");
-    }
+    const novaReceita = { nome, ingredientes, modoPreparo };
+    await onAdd(novaReceita);
   };
 
   return (
@@ -53,7 +52,9 @@ const RecipeForm = ({ onAdd }) => {
         onChange={(e) => setModoPreparo(e.target.value)}
       ></textarea>
 
-      <button type="submit">Salvar</button>
+      <button type="submit">
+        {receitaEdit ? "Atualizar Receita" : "Salvar"}
+      </button>
     </form>
   );
 };
