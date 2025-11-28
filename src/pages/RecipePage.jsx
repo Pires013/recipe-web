@@ -34,7 +34,7 @@ const RecipePage = () => {
 
   return (
     <div className="receitas-page">
-      <h2>🍲 Todas as Receitas</h2>
+      <h2>Todas as Receitas</h2>
 
       <input
         type="text"
@@ -72,7 +72,7 @@ const RecipePage = () => {
 
                   <div className="botoes-edicao">
                     <button className="salvar-btn" onClick={handleSave}>
-                      💾 Salvar
+                       Salvar
                     </button>
                     <button
                       className="cancelar-btn"
@@ -99,7 +99,7 @@ const RecipePage = () => {
                       className="editar-btn"
                       onClick={() => handleEdit(r)}
                     >
-                      ✏️ Editar
+                      Editar
                     </button>
                     <button
                       className="excluir-btn"
@@ -121,7 +121,7 @@ const RecipePage = () => {
             </div>
           ))
         ) : (
-          <p className="nenhuma">Nenhuma receita encontrada 😕</p>
+          <p className="nenhuma">Nenhuma receita encontrada </p>
         )}
       </div>
     </div>

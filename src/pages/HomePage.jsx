@@ -8,21 +8,21 @@ export default function HomePage() {
   return (
     <div className="home-container">
       <header className="home-header">
-        <h1>🍳 Bem-vindo ao Livro de Receitas!</h1>
-        <p>Descubra, crie e salve suas receitas favoritas ❤️</p>
+        <h1> Bem-vindo ao Livro de Receitas!</h1>
+        <p>Descubra, crie e salve suas receitas favoritas </p>
       </header>
 
       <section className="home-actions">
         <Link to="/receitas" className="card-action">
-          📖 Ver Receitas
+          Ver Receitas
         </Link>
 
         <Link to="/cadastro-receita" className="card-action">
-          ➕ Cadastrar Receita
+          Cadastrar Receita
         </Link>
 
         <Link to="/favoritos" className="card-action">
-          ⭐ Favoritos
+          Favoritos
         </Link>
       </section>
 
